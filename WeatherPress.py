@@ -42,7 +42,8 @@ postTitleTemperature = "%.1f°C" %temperature
 print('preparing post...')
 
 import yaml
-config = yaml.safe_load(open("WeatherPress.config.yml"))
+with open("WeatherPress.config.yml", "r") as configFile:
+    config = yaml.safe_load(configFile)
 blog = Client(config['WordPress']['xmlRcpApiUrl'],
               config['WordPress']['username'],
               config['WordPress']['password'])
