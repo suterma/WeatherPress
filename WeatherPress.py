@@ -39,10 +39,13 @@ print (textTemperature)
 postTitleHumidity = "%.1f%%" %humidity
 postTitleTemperature = "%.1f°C" %temperature
 
-xmlRcpApiUrl = 'https://XXX/xmlrpc.php'
-username = 'XXX'
-password =  'XXX'
-blog = Client(xmlRcpApiUrl, username, password)
+print('preparing post...')
+
+import yaml
+config = yaml.safe_load(open("WeatherPress.config.yml"))
+blog = Client(config['WordPress']['xmlRcpApiUrl'],
+              config['WordPress']['username'],
+              config['WordPress']['password'])
 
 print('posting...')
 
