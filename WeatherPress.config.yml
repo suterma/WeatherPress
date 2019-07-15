@@ -1,0 +1,4 @@
+WordPress:
+    xmlRcpApiUrl: https://example.com/xmlrpc.php
+    username: someuser
+    password: monkey123
