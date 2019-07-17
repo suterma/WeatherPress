@@ -49,11 +49,10 @@ post = WordPressPost()
 post.title = ("{:.1f} <span class='unity'>°C</span>".format(temperature) +
               "&nbsp;&nbsp;&nbsp;"+
               "{:.0f} <span class='unity'>%rH</span>".format(humidity))
-post.slug='MY_POST_PERMANENT_LINK'
 post.content = textTemperature + ' ' + textHumidity
 post.terms_names = {
-        'post_tag': ['1.OG', 'Nordseite'],
-        'category': ['Aussen'],
+        'post_tag': [config['WordPress']['tag']],
+        'category': [config['WordPress']['category']],
 }
 post.id = blog.call(posts.NewPost(post))
 # Always publish these posts
@@ -63,7 +62,3 @@ blog.call(posts.EditPost(post.id, post))
 
 # Report success
 print(post.title + ' publicly posted to ' + config['WordPress']['xmlRcpApiUrl'])
-
-
-
-
