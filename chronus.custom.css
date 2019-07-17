@@ -1,0 +1,45 @@
+/* These are specific changes to the chronus theme, to make it a better suit for the measurement logs */
+span.unity {
+    font-size: smaller;
+    opacity: 0.5;
+}
+
+/* BIG header */
+@media only screen
+{.site-title {
+    font-size: 15rem;
+	  line-height: 1;
+	  margin: 0;
+	}
+}
+@media only screen
+{
+.header-main {
+    padding: 0;
+	}
+}
+
+/* no menu */
+#main-navigation-wrap {
+	display: none;
+}
+
+/* white/gray on black */
+.entry-meta,
+.entry-meta.entry-date,
+.entry-meta.entry-date,
+.entry-meta :after,
+a:link, a:visited
+{
+	background-color: black;
+	color: graytext !important;
+}
+
+body,
+.site,
+.entry-title a:link, 
+.site-title a:link
+{
+	background-color: black;
+	color: white !important;
+}
