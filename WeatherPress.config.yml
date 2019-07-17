@@ -6,3 +6,7 @@ WordPress:
     username: someuser
     # The password to the account
     password: monkey123
+    # A tag which is appended to each post from this sensor
+    tag: zero-wh    
+    # A category which is appended to each post from this sensor
+    category: indoor-first-floor
